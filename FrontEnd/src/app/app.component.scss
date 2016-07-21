@@ -1,5 +1,14 @@
 @import '../styles/variables';
 
 .header {
-  background-color: $headerBackground;
+  height: 10%;
+}
+
+.content{
+  height: 90%;
+  position: relative;
+  z-index:0;
+}
+
+body{
 }
