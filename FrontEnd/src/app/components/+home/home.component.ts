@@ -14,7 +14,7 @@ export class HomeComponent {
         this.pathImage="../../../../assets/home/picture.png";
     }
 
-    openQuizz(){
+    openQuiz(){
         this.router.navigate(['Quiz']);
     }
 }

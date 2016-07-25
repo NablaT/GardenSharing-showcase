@@ -1,18 +1,18 @@
 @import "../../../styles/main";
 
-.main{
+.main {
 
   text-align: center;
 
   .gameDescription {
-      color: #efc861;
+    color: #efc861;
     transition: color 1s;
-      .fa-gamepad{
-        font-style: normal;
-      }
+    .fa-gamepad {
+      font-style: normal;
+    }
   }
 
-  .gameDescription:hover{
+  .gameDescription:hover {
     cursor: pointer;
     transition: color 1s;
     color: #FFE692;
