@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {Router} from "@angular/router-deprecated";
 
 @Component({
     selector: 'home',
@@ -9,7 +10,11 @@ import {Component} from "@angular/core";
 export class HomeComponent {
     public pathImage:string;
 
-    constructor(){
+    constructor(private router:Router){
         this.pathImage="../../../../assets/home/picture.png";
+    }
+
+    openQuizz(){
+        this.router.navigate(['Quiz']);
     }
 }

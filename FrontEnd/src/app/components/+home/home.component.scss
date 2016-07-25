@@ -1,5 +1,21 @@
 @import "../../../styles/main";
 
-.description{
+.main{
+
   text-align: center;
+
+  .gameDescription {
+      color: #efc861;
+    transition: color 1s;
+      .fa-gamepad{
+        font-style: normal;
+      }
+  }
+
+  .gameDescription:hover{
+    cursor: pointer;
+    transition: color 1s;
+    color: #FFE692;
+  }
+
 }
