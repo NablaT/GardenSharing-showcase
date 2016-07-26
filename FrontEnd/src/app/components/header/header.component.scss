@@ -25,9 +25,19 @@
       transition: color 1s;
       color:rgb(11,22,44);
     }
-    background-color: #FFE692;
+    background-color: #;
     transition: background-color 1s;
     cursor:pointer;
+  }
+
+  .item:active{
+    a{
+      color:rgb(11,22,44);
+    }
+  }
+
+  .content{
+    padding-top: 10px;
   }
 }
 
