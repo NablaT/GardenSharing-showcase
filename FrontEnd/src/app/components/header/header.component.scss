@@ -6,24 +6,32 @@
   margin-left: auto;
   margin-right: auto;
   max-width: initial;
+  font-size: 1.8em;
 
   .item{
+    height:5%;
+    a{
+      transition: color 1s;
+      color: #FFE692;
+    }
+
     text-align: center;
-    color: $menuFontColor;
     background-color:rgba(11,22,44,0.90);
     transition: background-color 1s;
-
-    transition: color 1s;
   }
 
   .item:hover{
-
-    color:rgb(11,22,44);
+    a{
+      transition: color 1s;
+      color:rgb(11,22,44);
+    }
     background-color: #FFE692;
     transition: background-color 1s;
-    transition: color 1s;
     cursor:pointer;
-
   }
+}
+
+.main > .item > .menuItem{
+    top: 25px;
 }
 
