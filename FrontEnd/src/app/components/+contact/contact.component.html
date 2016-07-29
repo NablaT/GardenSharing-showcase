@@ -5,27 +5,51 @@
                     small-10 small-centered">
 
         <div class="row">
-            <div class="large-6 large-centered">
+            <div class="large-3 large-centered">
                 <img src="{{contact.pathImage}}" alt="">
             </div>
         </div>
         <div class="row description">
-            <div class="large-6 large-centered">
-                <h1>{{contact.title}}</h1>
-                <h2>{{contact.description}}</h2>
+            <div class="large-8 large-centered">
+                <h2>{{contact.title}}</h2>
+
             </div>
         </div>
-        <div class="game row">
-            <div class="large-6 large-centered
-                    medium-6 medium-centered
-                    small-6 small-centered
-                    gameDescription"
+        <div class="row">
+            <div class="large-8 large-centered">
+                {{contact.description}}
+            </div>
+        </div>
+        <br>
+        <div class="icon row">
+            <div class="large-2 large-offset-3
+                    medium-4
+                    small-4 columns
+                    iconItem " id="mail"
             >
-                <h2><i class="fa fa-gamepad" aria-hidden="true"></i>
+                <h2><i class="fa fa-envelope" aria-hidden="true"></i>
                     </h2>
             </div>
+            <div class="large-2
+                    medium-4
+                    small-4 columns
+                    iconItem" id="twitter"
+            >
+                <h2><i class="fa fa-twitter" aria-hidden="true"></i>
+                </h2>
+            </div>
+            <div class="large-2
+                    medium-4
+                    small-4 columns end
+                    iconItem" id="facebook"
+            >
+                <h2><i class="fa fa-facebook" aria-hidden="true"></i>
+                </h2>
+            </div>
 
 
         </div>
+        <br>
+        <br>
     </div>
 </div>

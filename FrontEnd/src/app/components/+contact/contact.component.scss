@@ -1,1 +1,41 @@
 @import "../../../styles/main";
+
+
+.main{
+
+
+  h2{
+    text-align: center;
+  }
+
+  .large-6{
+    text-align: justify;
+  }
+
+  .icon{
+
+    .fa{
+      font-style: normal;
+    }
+  }
+
+  #facebook,#twitter,#mail{
+    transition:transform 1s;
+    color:#FFE692;
+  }
+
+  #facebook:hover, #twitter:hover, #mail:hover{
+    transition:transform 1s;
+    transform:scale(1.6);
+    cursor:pointer;
+
+
+  }
+
+
+  .icon:hover{
+    .fa{
+    }
+  }
+
+}
