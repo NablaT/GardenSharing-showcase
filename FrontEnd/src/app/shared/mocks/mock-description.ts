@@ -1,4 +1,4 @@
 
-export var DESCRIPTIONFRENCH: Array ;
+export var DESCRIPTIONFRENCH: Array<string>=[];
 
-export var DESCRIPTIONENGLISH: Array;
+export var DESCRIPTIONENGLISH: Array<string>=[];

@@ -1,4 +1,4 @@
 
-export var GAMEFRENCH: Array ;
+export var GAMEFRENCH: Array<string>=[] ;
 
-export var GAMEENGLISH: Array;
+export var GAMEENGLISH: Array<string>=[];
