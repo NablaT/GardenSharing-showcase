@@ -11,12 +11,10 @@ import {HomeModel} from "../../shared/models/HomeModel";
     providers: [ShowGoodContentService]
 })
 export class HomeComponent {
-    public pathImage:string;
     public home:HomeModel;
 
     constructor(private router:Router,
         private contentService:ShowGoodContentService){
-        this.pathImage="../../../../assets/home/picture.png";
 
         //Todo: To remove while the language changes process has been developed.
         this.home=this.contentService.getHomeContent("French");

@@ -2,8 +2,9 @@
  * Service ShowGoodContentService
  */
 import {Injectable} from '@angular/core';
-import {HOMEFRENCH, HOMEENGLISH} from "../../mocks/index";
+import {HOMEFRENCH, HOMEENGLISH, CONTACTFRENCH, CONTACTENGLISH} from "../../mocks/index";
 import {HomeModel} from "../../models/HomeModel";
+import {ContactModel} from "../../models/ContactModel";
 
 @Injectable()
 export class ShowGoodContentService {
@@ -23,5 +24,23 @@ export class ShowGoodContentService {
         }
         return new HomeModel("","","","");
     }
+
+
+    /**
+     * Function to get contact model according to language.
+     * @param language
+     * @returns {ContactModel}
+     */
+    public getContactContent(language:string) {
+        if(language==="French"){
+            return CONTACTFRENCH;
+        }
+        else if(language==="English"){
+            return CONTACTENGLISH;
+        }
+        return new ContactModel("","","",["","",""]);
+    }
+
+
 
 }
