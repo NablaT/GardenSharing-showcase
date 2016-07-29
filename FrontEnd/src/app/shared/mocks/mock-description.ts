@@ -1,3 +1,4 @@
-/**
- * Created by rpourtier on 29/07/2016.
- */
+
+export var DESCRIPTIONFRENCH: Array ;
+
+export var DESCRIPTIONENGLISH: Array;
