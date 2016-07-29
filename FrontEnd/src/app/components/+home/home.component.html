@@ -5,13 +5,13 @@
                     small-10 small-centered">
         <div class="row">
             <div class="large-6 large-centered">
-                <img src="../../../assets/logo1.png" alt="">
+                <img src="{{home.pathImage}}" alt="">
             </div>
         </div>
         <div class="row description">
             <div class="large-6 large-centered">
-               <h1>Garden Sharing</h1>
-                <h2>Une nouvelle vision des jardins</h2>
+               <h1>{{home.title}}</h1>
+                <h2>{{home.description}}</h2>
             </div>
         </div>
         <div class="game row">
@@ -22,7 +22,7 @@
                  (click)="openQuiz()"
             >
                 <h2><i class="fa fa-gamepad" aria-hidden="true"></i>
-                Découvrir le projet !</h2>
+                    {{home.linkName}}</h2>
             </div>
 
 

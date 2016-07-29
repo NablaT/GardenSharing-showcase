@@ -4,6 +4,8 @@ import {HeaderComponent} from './components/header/index';
 import {AboutComponent} from './components/+about/index';
 import {HomeComponent} from './components/+home/index';
 import {QuizComponent} from "./components/+quiz/quiz.component";
+import {ContactComponent} from "./components/+contact/contact.component";
+
 @Component({
     selector: 'app',
     moduleId: module.id,
@@ -17,7 +19,8 @@ import {QuizComponent} from "./components/+quiz/quiz.component";
 @RouteConfig([
     {path: '/', name: 'Home', component: HomeComponent},
     {path: '/about', name: 'About', component: AboutComponent},
-    {path: '/quiz', name: 'Quiz', component: QuizComponent}
+    {path: '/quiz', name: 'Quiz', component: QuizComponent},
+    {path: '/contacts', name: 'Contact', component: ContactComponent}
 ])
 export class AppComponent {
 }

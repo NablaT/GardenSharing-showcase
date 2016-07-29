@@ -49,6 +49,11 @@ export class HeaderComponent {
         }
     }
 
+    /**
+     * Function navigateTo changes the router-outlet content according to user
+     * clicks in the header.
+     * @param page
+     */
     navigateTo(page:string){
         this.router.navigate([page]);
     }
