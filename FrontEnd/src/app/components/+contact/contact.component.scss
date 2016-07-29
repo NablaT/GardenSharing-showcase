@@ -52,7 +52,9 @@
   }
 
   .rating > span:hover:before,
-  .rating > span:hover ~ span:before {
+  .rating > span:hover ~ span:before,
+  .rating > span:active:before,
+  .rating > span:active ~ span:before{
     content: "\2605";
     color:$titleColor;
     transition:color 1s;
