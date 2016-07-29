@@ -3,8 +3,6 @@
 
 
 .main{
-
-
   h2{
     text-align: center;
   }
@@ -14,7 +12,6 @@
   }
 
   .icon{
-
     .fa{
       font-style: normal;
     }
@@ -27,16 +24,39 @@
 
   #facebook:hover, #twitter:hover, #mail:hover{
     transition:transform 1s;
-    transform:scale(1.6);
     cursor:pointer;
-
-
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg) scale(1.6);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
   }
 
-
-  .icon:hover{
+  .rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    transition:color 1s;
+    color:$titleColor;
     .fa{
+      font-style: normal;
+
     }
+  }
+  .rating > span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+    transition:color 1s;
+  }
+
+  .rating > span:hover:before,
+  .rating > span:hover ~ span:before {
+    content: "\2605";
+    color:$titleColor;
+    transition:color 1s;
+    position: absolute;
   }
 
 }

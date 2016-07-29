@@ -1,0 +1,3 @@
+/**
+ * Test directive HighlightStarDirective.
+ */
