@@ -5,35 +5,35 @@
             Garden Sharing
         </div>
     </div>
-    <div class="large-2 columns item" @itemState="state"
-         (click)="changeState()">
+    <div class="large-2 columns item"  (click)="navigateTo('Home')"
+        >
         <div class="content"  >
 
-            <a class="menuItem" [routerLink]="['Home']">
+            <a class="menuItem" >
                 <i class="fa fa-home" aria-hidden="true"></i>
                 Home </a>
         </div>
     </div>
-    <div class="large-2 columns item">
+    <div class="large-2 columns item"  (click)="navigateTo('Quiz')">
         <div class="content">
 
-            <a class="menuItem" [routerLink]="['Quiz']">
+            <a class="menuItem" >
                 <i class="fa fa-gamepad" aria-hidden="true"></i>
                 Quiz </a>
         </div>
     </div>
-    <div class="large-2 columns item">
+    <div class="large-2 columns item"  (click)="navigateTo('Quiz')">
         <div class="content">
 
-            <a class="menuItem" [routerLink]="['Quiz']">
+            <a class="menuItem" >
                 <i class="fa fa-list-alt" aria-hidden="true"></i>
                 Description </a>
         </div>
     </div>
-    <div class="large-2 columns end item">
+    <div class="large-2 columns end item" (click)="navigateTo('About')">
         <div class="content">
 
-            <a class="menuItem" [routerLink]="['About']">
+            <a class="menuItem" >
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 Contacts </a>
         </div>
