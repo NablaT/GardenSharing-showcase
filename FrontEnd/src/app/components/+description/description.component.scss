@@ -1,0 +1,11 @@
+@import "../../../styles/main";
+@import "../../../styles/variables";
+
+.title{
+  text-align: center;
+
+}
+
+h2, .titleQuestion {
+  color: $titleColor;
+}

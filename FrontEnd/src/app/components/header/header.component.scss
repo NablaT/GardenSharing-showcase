@@ -12,7 +12,7 @@
     height:5%;
     a{
       transition: color 1s;
-      color: #FFE692;
+      color: $titleColor;
     }
 
     text-align: center;
@@ -25,7 +25,7 @@
       transition: color 1s;
       color:rgb(11,22,44);
     }
-    background-color: #FFE692;
+    background-color: $titleColor;
     transition: background-color 1s;
     cursor:pointer;
   }
