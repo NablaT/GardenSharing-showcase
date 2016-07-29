@@ -1,22 +1,22 @@
-    <div class="row ">
+<div class="row ">
 
     <div class="main large-8 large-centered
                     medium-8 medium-centered
                     small-10 small-centered">
 
         <div class="row">
-            <div class="large-3 large-centered">
+            <div class="large-3 large-centered medium-3 medium-centered small-3 small-centered">
                 <img src="{{contact.pathImage}}" alt="">
             </div>
         </div>
         <div class="row description">
-            <div class="large-8 large-centered">
+            <div class="large-8 large-centered medium-8 medium-centered small-10 small-centered">
                 <h2>{{contact.title}}</h2>
 
             </div>
         </div>
         <div class="row">
-            <div class="large-8 large-centered">
+            <div class="large-8 large-centered medium-8 medium-centered small-10 small-centered">
                 {{contact.description}}
             </div>
         </div>
@@ -49,18 +49,28 @@
         </div>
         <br>
         <br>
-        <div class="row">
-            <div class="large-6 large-centered">
+        <div class="row ">
+            <div class="large-8 large-centered medium-6 medium-centered small-10 small-centered secondTitle">
                 Utiliseriez-vous nos produits ?
             </div>
         </div>
-        <h1>
-        <div class="rating">
-            <span><i class="fa fa-star-o" aria-hidden="true" [ngClass]="star1" (click)="changeActive('1')"></i></span>
-            <span><i class="fa fa-star-o" aria-hidden="true" [ngClass]="star2" (click)="changeActive('2')"></i></span>
-            <span><i class="fa fa-star-o" aria-hidden="true" [ngClass]="star3" (click)="changeActive('3')"></i></span>
-            <span><i class="fa fa-star-o" aria-hidden="true" [ngClass]="star4" (click)="changeActive('4')"></i></span>
-            <span><i class="fa fa-star-o" aria-hidden="true" [ngClass]="star5" (click)="changeActive('5')"></i></span>
-        </div></h1>
+        <div class="row">
+            <div class="large-6 large-centered medium-7 medium-centered small-10 small-centered">
+                <h1>
+                    <div class="rating">
+                        <span><i class="fa fa-star-o" aria-hidden="true" [ngClass]="star1"
+                                 (click)="changeActive('1')"></i></span>
+                        <span><i class="fa fa-star-o" aria-hidden="true" [ngClass]="star2"
+                                 (click)="changeActive('2')"></i></span>
+                        <span><i class="fa fa-star-o" aria-hidden="true" [ngClass]="star3"
+                                 (click)="changeActive('3')"></i></span>
+                        <span><i class="fa fa-star-o" aria-hidden="true" [ngClass]="star4"
+                                 (click)="changeActive('4')"></i></span>
+                        <span><i class="fa fa-star-o" aria-hidden="true" [ngClass]="star5"
+                                 (click)="changeActive('5')"></i></span>
+                    </div>
+                </h1>
+            </div>
+        </div>
     </div>
 </div>
