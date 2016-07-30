@@ -1,11 +1,22 @@
 @import "../../../styles/main";
 @import "../../../styles/variables";
 
-.title {
-  text-align: center;
+.main {
+  .title {
+    text-align: center;
 
-}
+  }
 
-h2, .titleQuestion {
-  color: $titleColor;
+  .fa {
+    font-style: normal;
+  }
+
+  .fa:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+  }
+
+  h2, .titleQuestion,.fa {
+    color: $titleColor;
+  }
 }

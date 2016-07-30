@@ -5,16 +5,38 @@
 
         <div class="row title">
             <h2> Garden Sharing<br/>
-            Description
+                Quiz
             </h2>
         </div>
         <div class="row question">
             <div class="titleQuestion large-11 large-offset-1
                 medium-11 medium-offset-1
                  small-offset-1 small-11">
-                Quiz: Question 1
+                Question {{currentIndex}}: {{questions[currentIndex-1].question}}
             </div>
         </div>
+        <div class="row" *ngFor="let answer of questions[currentIndex-1].answerList; let i=index">
+            <div class="large-11 large-offset-1
+                medium-11 medium-offset-1
+                 small-offset-1 small-11">
+
+                <i class="fa" aria-hidden="true"
+                   [ngClass]="questions[currentIndex-1].answerCSSClass[i]"
+                   (click)="checkAnswer(i)"
+                ></i> {{answer}} <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="submitButton" id="validate" (click)="verifyAnswer()">
+                <!-- BUTTON VALIDATE -->
+                {{questions[currentIndex-1].buttonTitles[0]}}
+            </div>
+            <div class="submitButton" id="next" (click)="verifyAnswer()">
+                <!-- BUTTON NEXT QUESTION -->
+                {{questions[currentIndex-1].buttonTitles[1]}}
+            </div>
+        </div>
+
 
     </div>
 </div>
