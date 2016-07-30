@@ -4,10 +4,12 @@
 import {Injectable} from '@angular/core';
 import {HOMEFRENCH, HOMEENGLISH,
     CONTACTFRENCH, CONTACTENGLISH,
-    DESCRIPTIONFRENCH, DESCRIPTIONENGLISH} from "../../mocks/index";
+    DESCRIPTIONFRENCH, DESCRIPTIONENGLISH,
+    GAMEFRENCH, GAMEENGLISH} from "../../mocks/index";
 import {HomeModel} from "../../models/HomeModel";
 import {ContactModel} from "../../models/ContactModel";
 import {DescriptionModel} from "../../models/DescriptionModel";
+import {QuestionModel} from "../../models/QuestionModel";
 
 @Injectable()
 export class ShowGoodContentService {
@@ -59,6 +61,21 @@ export class ShowGoodContentService {
         return new DescriptionModel("","","",["","",""],["","",""]);
     }
 
+    /**
+     * Function to get game model according to language. The game
+     * model is a list of QuestionModel
+     * @param language
+     * @returns {Array<QuestionModel>}
+     */
+    public getGameContent(language:string) {
+        if(language==="French"){
+            return GAMEFRENCH;
+        }
+        else if(language==="English"){
+            return GAMEENGLISH;
+        }
+        return [new QuestionModel("",["","",""],"","")];
+    }
 
 
 }
