@@ -15,18 +15,31 @@
                 {{description.generalDescription}}
             </div>
         </div>
-        <div class="row">
-            <div class="large-offset-1 columns">e</div>
-            <div class="item large-3 medium-3 small-3 columns end" *ngFor="let item of description.choices"
-                (click)="showDescription(item)">
-                <a>{{item}}</a>
-            </div>
-        </div>
-
+        <br>
         <div class="row">
             <div class="large-10 large-offset-1
                 medium-10 medium-offset-1
                  small-offset-1 small-10 end columns">
+                {{description.secondTitle}}
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="large-10 large-centered">
+                <div class="row">
+
+                    <div class="item large-4 medium-4 small-4 columns end" *ngFor="let item of description.choices"
+                         (click)="showDescription(item)">
+                        <a class="linkItem"> <span>{{item}}</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="large-10 large-offset-1
+                medium-10 medium-offset-1
+                 small-offset-1 small-10 end columns paragraph">
                 <div *ngIf="partToShow>-1">
                     {{description.descriptionForEachChoice[partToShow]}}
                 </div>

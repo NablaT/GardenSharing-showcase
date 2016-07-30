@@ -24,6 +24,13 @@ export class DescriptionComponent {
         this.description=manageContent.getDescriptionContent("French");
     }
 
+    /**
+     * Function showDescription.
+     * This function changes the value of partToShow according to user click.
+     * When a user clicks on of the link, we call the fucntion showDescription
+     * and add in parameter the name of the clicked link.
+     * @param partToShow
+     */
     showDescription(partToShow:string){
         this.partToShow= this.description.choices.indexOf(partToShow);
 
