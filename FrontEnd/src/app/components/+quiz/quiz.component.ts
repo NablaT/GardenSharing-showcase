@@ -10,29 +10,29 @@ import {QuestionModel} from "../../shared/models/QuestionModel";
     selector: 'quiz',
     moduleId: module.id,
     templateUrl: './quiz.component.html',
-    styleUrls : ['./quiz.component.css'],
+    styleUrls: ['./quiz.component.css'],
     providers: [ShowGoodContentService]
 })
 export class QuizComponent {
 
     private questions:Array<QuestionModel>;
-   // private ngClassForAnswer:Array<string>;
+    // private ngClassForAnswer:Array<string>;
     private currentIndex:number;
     private pageState:string;
 
-    constructor(private manageContent:ShowGoodContentService){
-        this.currentIndex=1;
+    constructor(private manageContent:ShowGoodContentService) {
+        this.currentIndex = 1;
         //TODO: To remove when the changing language features have been developed
-        this.questions=this.manageContent.getGameContent("French");
-       // this.initializeClasses();
+        this.questions = this.manageContent.getGameContent("French");
+        // this.initializeClasses();
     }
 
 
-    initializeClasses(){
+    initializeClasses() {
         /*this.ngClassForAnswer=[];
-        for(let i=0;i<this.questions.length;i++){
-            this.ngClassForAnswer.push("fa-square-o");
-        }*/
+         for(let i=0;i<this.questions.length;i++){
+         this.ngClassForAnswer.push("fa-square-o");
+         }*/
     }
 
     /**
@@ -42,12 +42,12 @@ export class QuizComponent {
      * fa-square-o to fa-check-square or the contrary
      * @param index
      */
-    checkAnswer(index:number){
-        let currentCSSClassAnswer=this.questions[this.currentIndex-1].answerCSSClass[index];
+    checkAnswer(index:number) {
+        let currentCSSClassAnswer = this.questions[this.currentIndex - 1].answerCSSClass[index];
 
-        if(currentCSSClassAnswer==="fa-square-o") this.questions[this.currentIndex-1].answerCSSClass[index]="fa-check-square";
-        else{
-            this.questions[this.currentIndex-1].answerCSSClass[index]="fa-square-o";
+        if (currentCSSClassAnswer === "fa-square-o") this.questions[this.currentIndex - 1].answerCSSClass[index] = "fa-check-square";
+        else {
+            this.questions[this.currentIndex - 1].answerCSSClass[index] = "fa-square-o";
         }
     }
 
@@ -56,13 +56,25 @@ export class QuizComponent {
      * all the answer with the css class fa-check-sqare (which means user
      * has clicked on answer) and verifies if it corresponds to the good answer
      */
-    verifyAnswer(){
-        
+    verifyAnswer() {
+        let allSelectedAnswer = this.getAllIndexes();
+
+        //TODO: To remove when a question has several answer
+        if(allSelectedAnswer.length==1){
+            
+        }
     }
 
-    
-    nextQuestion(){
+    getAllIndexes() {
+        let indexes = [], i = -1;
+        while ((i = this.questions[this.currentIndex - 1].answerCSSClass.indexOf("fa-check-square", i + 1)) != -1) {
+            indexes.push(i);
+        }
+        return indexes;
+    }
+
+    nextQuestion() {
 
     }
-    
+
 }
