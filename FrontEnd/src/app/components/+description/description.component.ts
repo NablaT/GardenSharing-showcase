@@ -16,11 +16,16 @@ import {DescriptionModel} from "../../shared/models/DescriptionModel";
 export class DescriptionComponent {
 
     private description: DescriptionModel;
+    private partToShow:number;
 
     constructor(private manageContent:ShowGoodContentService){
+        this.partToShow=-1;
         //TODO: To remove when the changing language functionalities have been developed
         this.description=manageContent.getDescriptionContent("French");
     }
 
+    showDescription(partToShow:string){
+        this.partToShow= this.description.choices.indexOf(partToShow);
 
+    }
 }

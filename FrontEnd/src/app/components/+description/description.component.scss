@@ -1,11 +1,37 @@
 @import "../../../styles/main";
 @import "../../../styles/variables";
 
-.title{
+.title {
   text-align: center;
 
 }
 
-h2, .titleQuestion {
+h2 {
   color: $titleColor;
+}
+
+.titleQuestion{
+  color:white;
+}
+
+.item {
+  height: 5%;
+  a {
+    transition: color 1s;
+    color: $titleColor;
+  }
+
+  text-align: center;
+  background-color: rgba(11, 22, 44, 0.90);
+  transition: background-color 1s;
+}
+
+.item:hover {
+  a {
+    transition: color 1s;
+    color: rgb(11, 22, 44);
+  }
+  background-color: $titleColor;
+  transition: background-color 1s;
+  cursor: pointer;
 }

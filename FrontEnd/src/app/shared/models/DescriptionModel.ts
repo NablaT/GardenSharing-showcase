@@ -1,10 +1,10 @@
 export class DescriptionModel{
 
-    private title:string;
-    private generalDescription:string;
-    private secondTitle:string;
-    private choices:Array<string>;
-    private descriptionForEachChoice:Array<string>;
+    public title:string;
+    public generalDescription:string;
+    public secondTitle:string;
+    public choices:Array<string>;
+    public descriptionForEachChoice:Array<string>;
 
     constructor(title:string,generalDescription:string,
                 secondTitle:string,

@@ -5,14 +5,31 @@
 
         <div class="row title">
             <h2> Garden Sharing<br/>
-                Description
+                {{description.title}}
             </h2>
         </div>
         <div class="row question">
-            <div class="titleQuestion large-11 large-offset-1
-                medium-11 medium-offset-1
-                 small-offset-1 small-11">
-               
+            <div class="titleQuestion large-10 large-offset-1
+                medium-10 medium-offset-1
+                 small-offset-1 small-10 end columns">
+                {{description.generalDescription}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-offset-1 columns">e</div>
+            <div class="item large-3 medium-3 small-3 columns end" *ngFor="let item of description.choices"
+                (click)="showDescription(item)">
+                <a>{{item}}</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="large-10 large-offset-1
+                medium-10 medium-offset-1
+                 small-offset-1 small-10 end columns">
+                <div *ngIf="partToShow>-1">
+                    {{description.descriptionForEachChoice[partToShow]}}
+                </div>
             </div>
         </div>
 
